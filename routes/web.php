@@ -29,6 +29,14 @@ Route::get('/layout', function () {
     return view('layout');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/about_us', function () {
+    return view('about_us');
+});
+
 Route::get('/product','ProductController@viewProduct');
 
 
