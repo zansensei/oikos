@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/clement.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/product.css')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('css/catalog.css')}}">
 
 
