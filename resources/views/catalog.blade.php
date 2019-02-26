@@ -17,23 +17,23 @@
         <div class="d-flex justify-content-between">
 
          <div>
-               <button type="button" class="btn btn-success btn-lg">Acheter</button>
+               <button type="button" class="btn btnColor btn-lg">Acheter</button>
                <button type="button" class="btn btn-secondary btn-lg">Fiche complète</button>
            </div>
 
             <div>
-            <button  type="button" class="btn btn-success ">{{$cardProduct['prix']}} €</button>
+            <button  type="button" class="btn btnColor ">{{$cardProduct['prix']}} €</button>
             </div>
         </div>
         </div>
     </div>
+</div><br>
 </div>
-
 @endforeach
 
 
 
 
 
-</div>
+
 @endsection

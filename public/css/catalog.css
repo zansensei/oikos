@@ -4,6 +4,12 @@ h2 {
 }
 
 
-.imgperso{
-max-width: 30%;
+.imgperso {
+    max-width: 30% !important;
+    max-height: 30% !important;
+}
+
+.btnColor{
+    background-color: #93c83e !important;
+    color:#ffffff !important;
 }
