@@ -10,7 +10,7 @@
                 <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Qui sommes-nous?</a>
+                <a class="nav-link" href="about_us">Qui sommes-nous?</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
