@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    background-image: url("/png/HeaderTest1.png") ;
+    background-repeat: no-repeat;
+    height: 15em;
+    background-position: center;
+}
+
+.cart, .question_mark{
+    position: relative;
+    height: 50px;
+}
+
+.cart_wrapper, .question_mark_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+
+.cart_wrapper {
+    margin-right: 30px;
+}
+
+.icons_wrapper{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+
+
+
+
+}
+

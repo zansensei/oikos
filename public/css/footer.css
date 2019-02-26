@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/svg/footerTest1.svg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20em;
+}
+
+.footer_links_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+
+}
+
+.footer_links_wrapper a{
+    color: #fff;
+}
+
+.footer_links_wrapper a:link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+
+
+}
+
+.footer_links_wrapper a:hover{
+    color: #f8772a;
+}
+
+
+
+.help{
+
+}
+
+.social_networks{
+
+}
+
+.terms{
+
+}
+
+.FAQ{
+
+}
