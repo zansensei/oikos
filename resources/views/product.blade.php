@@ -1,19 +1,8 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">                                                             <!-- INSERT BOOTSTRAP -->
-    <link rel="stylesheet" href="{{asset('css/product.css')}}">                                                         <!-- INSERT CSS -->
-    <meta name="language" content="Fr">
+@extends ('layout')
 
-
-    <title>Product</title>
-</head>
-<body>
-<div class="container1">
-    <h1>{{$product['nom']}}</h1>
+@section ('content')
+<div class="container center">
+    <h1>{{$product['nom']}}</h1><br>
 
     <div>
 
@@ -65,7 +54,7 @@
                 <div class="card-body">
 
                     <h4>€ {{$product['prix']}}</h4>
-                    <a href="#" class="btn btn-success btn-lg">Ajout Panier</a>
+                    <a href="#" class="btn colorBtn btn-lg">Ajout Panier</a>
                 </div>
             </div>
             <div class="card card-outline-secondary my-4">
@@ -87,14 +76,12 @@
             </div>
         </div>
 
-            <a href="{{$product['pdf']}}">Fiche Technique (PDF)</a>                 <!-- LIEN PDF -->
+            <a href="{{$product['pdf']}}" class="btn colorBtn btn-lg end">Fiche Technique (PDF)</a><br>              <!-- LIEN PDF -->
 
     </div>
 
 </div>
+</div>
     <script src="{{asset('js/app.js')}}" crossorigin="anonymous"></script>
     <script src="{{asset('js/bootstrap.js')}}" crossorigin="anonymous"></script>      <!-- SCRIPT JAVA BOOTSTRAP -->
-    <!-- SCRIPT JAVA BOOTSTRAP -->
-</body>
-</html>
-
+@endsection

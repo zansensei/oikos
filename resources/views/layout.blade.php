@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/clement.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/navbar.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/about_us.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/products.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/catalog.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/clement.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/product.css')}}">
 
+    <link rel="stylesheet" type="text/css" href="{{asset('css/catalog.css')}}">
 
 
 </head>
