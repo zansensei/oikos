@@ -37,8 +37,12 @@ Route::get('/about_us', function () {
     return view('about_us');
 });
 
+Route::get('/', function () {
+    return view('home');
+});
+
 Route::get('/product','ProductController@viewProduct');
 
 
-Route::get('/', 'UserController@index');
+Route::get('/home', 'UserController@index');
 

@@ -12,7 +12,7 @@
     <title>Product</title>
 </head>
 <body>
-<div class="container">
+<div class="container1">
     <h1>{{$product['nom']}}</h1>
 
     <div>
