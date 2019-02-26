@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/navbar.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/about_us.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/clementg.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 
 
 

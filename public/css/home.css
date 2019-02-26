@@ -32,7 +32,7 @@ body{
 .boton{
     width:60px;
     height:60px;
-    background-color:#f8772a;
+    background-color:#f8772a !important;
     font-size: 4rem !important;
     line-height: 3rem !important;
     text-transform: uppercase;
@@ -47,6 +47,10 @@ body{
 
 .boton a:hover{
     color: #808080;
+}
+
+.collapse.show {
+    display: flex !important;
 }
 
 .homeProductCollapse{
