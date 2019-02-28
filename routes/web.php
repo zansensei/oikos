@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/catalog', 'CatalogController@viewCatalog' );
+Route::get('/catalog', 'CatalogController@viewCatalog');
 
 Route::get('/panier', 'PanierController@viewPanier');
 
@@ -37,12 +37,10 @@ Route::get('/about_us', function () {
     return view('about_us');
 });
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/product','ProductController@viewProduct');
-
+Route::get('/product', 'ProductController@viewProduct');
 
 Route::get('/home', 'UserController@index');
+
+Route::get('/', 'UserController@index');
 
