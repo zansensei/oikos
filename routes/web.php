@@ -45,4 +45,5 @@ Route::get('/product','ProductController@viewProduct');
 
 
 Route::get('/home', 'UserController@index');
+Route::get('/', 'UserController@index');
 
