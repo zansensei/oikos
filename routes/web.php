@@ -11,10 +11,17 @@
 |
 */
 
+Route::get('/product', 'ReviewController@viewReview' );
 
 Route::get('/catalog', 'CatalogController@viewCatalog' );
 
 Route::get('/panier', 'PanierController@viewPanier');
+
+Route::get('/product','ProductController@viewProduct');
+
+Route::get('/home', 'UserController@index');
+
+Route::get('/', 'UserController@index');
 
 
 Route::get('/header', function () {
@@ -41,8 +48,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/product','ProductController@viewProduct');
 
 
-Route::get('/home', 'UserController@index');
 
