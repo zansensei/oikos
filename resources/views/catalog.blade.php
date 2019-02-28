@@ -1,19 +1,19 @@
 @extends ("layout")
-
+{{--{{dd($catalog)}}--}}
 {{--dd($product)--}}
 @section("content")
-    @foreach($product as $cardProduct)
+    @foreach($catalog as $cardProduct)
 
 <br>
 <div class="container">
-<div class="d-flex justify-content-start "><img src="{{$cardProduct['image']}}" alt="photo" class="img-thumbnail imgperso">
+<div class="d-flex justify-content-start "><img src="{{$cardProduct->image}}" alt="photo" class="img-thumbnail imgperso">
 
 
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title">{{$cardProduct['nom']}}</h2><br>
-            <h5 class="card-subtitle mb-2 text-muted"><strong>{{$cardProduct['accroche']}}</strong></h5><br>
-            <p class="card-text">{{$cardProduct['description']}}</p><br>
+            <h2 class="card-title">{{$cardProduct->name}}</h2><br>
+
+            <p class="card-text">{{$cardProduct->description}}</p><br>
         <div class="d-flex justify-content-between">
 
          <div>
@@ -22,7 +22,7 @@
            </div>
 
             <div>
-            <button  type="button" class="btn btnColor ">{{$cardProduct['prix']}} €</button>
+            <button  type="button" class="btn btnColor ">{{$cardProduct->price}} €</button>
             </div>
         </div>
         </div>
