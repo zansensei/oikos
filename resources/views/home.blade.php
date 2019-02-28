@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+    <!-- We will create one brand banner with each brand for our home page -->
     @foreach($brandsArray as $key => $brand)
 
         <div class="content">
@@ -17,6 +17,7 @@
                     +
                 </a>
                 <div class="collapse homeProductCollapse" id="collapseExample{{$brand['id']}}">
+                    <!-- We will create the products for each brand for our home page -->
                     @foreach($productsArray[$key] as $product)
                         <div class="card card-body productHome col-sm-3">
                             <div class="homeProductTitle">{{$product['name']}}</div>
