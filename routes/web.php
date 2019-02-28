@@ -1,4 +1,4 @@
-php<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +10,11 @@ php<?php
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/product', 'ProductController@index');
+
+Route::post('/product', 'ProductController@store');
+
+Route::get('/product/create', 'ProductController@create');
 
 Route::get('/product', 'ReviewController@viewReview' );
 
@@ -22,6 +27,10 @@ Route::get('/product','ProductController@viewProduct');
 Route::get('/home', 'UserController@index');
 
 Route::get('/', 'UserController@index');
+
+Route::get('/formReview', 'FormsController@create');
+
+Route::post('/formReview', 'FormsController@display');
 
 
 Route::get('/header', function () {
@@ -45,14 +54,6 @@ Route::get('/about_us', function () {
 });
 
 
-Route::get('/product','ProductController@viewProduct');
-
-Route::get('/database-product','ProductController@viewDatabase');
-
-
-Route::get('/home', 'UserController@index');
-Route::get('/', 'UserController@index');
 
 
 
-Route::get('/customer', 'CustomerController@index');
