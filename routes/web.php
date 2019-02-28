@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/product', 'ProductController@index');
+
+Route::post('/product', 'ProductController@store');
+
+Route::get('/product/create', 'ProductController@create');
 
 Route::get('/product', 'ReviewController@viewReview' );
 
@@ -17,11 +22,15 @@ Route::get('/catalog', 'CatalogController@viewCatalog' );
 
 Route::get('/panier', 'PanierController@viewPanier');
 
-Route::get('/product','ProductController@viewProduct');
+Route::get('/product', 'ProductController@viewProduct');
 
 Route::get('/home', 'UserController@index');
 
 Route::get('/', 'UserController@index');
+
+Route::get('/formReview', 'FormsController@create');
+
+Route::post('/formReview', 'FormsController@display');
 
 
 Route::get('/header', function () {
@@ -44,12 +53,13 @@ Route::get('/about_us', function () {
     return view('about_us');
 });
 
+Route::get('/', function () {
+    return view('home');
+});
 
-Route::get('/product','ProductController@viewProduct');
-
-
-Route::get('/home', 'UserController@index');
-Route::get('/', 'UserController@index');
+Route::get('/product', function () {
+    return view('product');
+});
 
 
 
