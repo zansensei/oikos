@@ -6,7 +6,7 @@
 
 <br>
 <div class="container">
-<div class="d-flex justify-content-start "><img src="{{$cardProduct->image}}" alt="photo" class="img-thumbnail imgperso">
+<div class="d-flex justify-content-start "><img src="{{$cardProduct->image1}}" alt="photo" class="img-thumbnail imgperso">
 
 
     <div class="card">
