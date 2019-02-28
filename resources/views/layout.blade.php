@@ -22,8 +22,6 @@
 </head>
 
 <body>
-
-
 @include("header_oikos")
 
 @include("navbar")

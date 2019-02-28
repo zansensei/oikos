@@ -1,4 +1,4 @@
-php<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +19,6 @@ Route::get('/panier', 'PanierController@viewPanier');
 
 Route::get('/product','ProductController@viewProduct');
 
-Route::get('/home', 'UserController@index');
-
-Route::get('/', 'UserController@index');
-
-
 Route::get('/header', function () {
     return view('header_oikos');
 });
@@ -43,7 +38,6 @@ Route::get('/contact', function () {
 Route::get('/about_us', function () {
     return view('about_us');
 });
-
 
 Route::get('/product','ProductController@viewProduct');
 

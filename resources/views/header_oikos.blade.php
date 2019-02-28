@@ -1,7 +1,3 @@
-
-
-
-
 <div class="header">
     <div class="icons_wrapper">
        <div class="cart_wrapper">
