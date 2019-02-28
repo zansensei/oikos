@@ -47,9 +47,12 @@ Route::get('/about_us', function () {
 
 Route::get('/product','ProductController@viewProduct');
 
+Route::get('/database-product','ProductController@viewDatabase');
+
 
 Route::get('/home', 'UserController@index');
 Route::get('/', 'UserController@index');
 
 
 
+Route::get('/customer', 'CustomerController@index');

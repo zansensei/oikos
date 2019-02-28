@@ -10,15 +10,16 @@
     <div class="container">
         <div class="row text-center text-xs-center text-sm-left text-md-left">
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>Newsletter</h5>
+                <a href="catalog"><h5>Newsletter</h5></a>
+
 
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>CGU</h5>
+                <a href="cgdv"><h5>CGDV</h5></a>
 
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-                <h5>Portfolio</h5>
+                <a href="#"><h5>Portfolio</h5></a>
 
             </div>
         </div>
