@@ -2,25 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use App\Review;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Routing\Controller as Controller;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ProductController extends Controller
+
 {
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
     public function viewProduct(){
-       // $product = array('nom' => 'Aerogarden',
-       //                  'prix' => 189, 'image1' => asset('img/aerogarden/aerogarden-01.jpg'),'image2' => asset('img/aerogarden/aerogarden-02.jpg'),'image3' => asset('img/aerogarden/aerogarden-03.jpeg'),'image4' => asset('img/aerogarden/aerogarden-04.jpeg'),
-       //                  'accroche' => 'AeroGarden avec kit de graine de plante',
-       //                  'description' => 'Jardin de l’année avec le AeroGarden Mircale-Gro. Faites pousser des plantes fraiches, des légumes, des sales vertes, des fleurs et bien plus ! Le AeroGarden est un système de jardinage en intérieur sans sol qui fait pousser des plantes 5 fois plus rapidement que dans le sol.', 'video' => 'https://www.youtube.com/embed/NnUFlagDwZA',
-        //                 'pdf' => 'https://www.aerogarden.com/media/wysiwyg/kbase/QSG_AG_Bounty-BountyElite_EU_20170929_NoCrop.pdf');
-        //$avisClient = array('avis' => 'Acheté l\'an passé et installé seulement depuis peu. Au bout de quelques semaines tout a poussé et de façon très dense. J\'ai même été contrainte de tailler certains plants. Agréablement surprise par ce produit!',
-        //                    'nomClient' => 'Rebecca',
-         //                  'date' => '16/12/18');
 
-        $anyreview = DB::select('select * from review where id = ?', [1]);
 
-        $anyproduct = DB::select('select * from product where id = ?', [1]);
-
+        if ($id) {
+            $anyreview = Review::where('id', $id)->get();
+        } else {
+            $anyproduct = product::all();
+        }
         return view('product',['anyproduct' => $anyproduct , 'anyreview' => $anyreview ]);
+
+
+    }
+
+    public function create() {
+        return view('review.create');
+    }
+
+    public function store() {
+        $review = new Review();
+        $review->review = request('review');
+        $review->note = request('note');
+        $review->save();
+        $anyreview = Review::all();
+        return view('anyreview.index',  ['anyreview' => $anyreview = Review::all()]);
     }
 }
