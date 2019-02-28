@@ -1,4 +1,4 @@
-c<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +12,7 @@ c<?php
 */
 
 
-Route::get('/catalog', 'CatalogController@viewCatalog');
+Route::get('/catalog', 'CatalogController@viewCatalog' );
 
 Route::get('/panier', 'PanierController@viewPanier');
 
@@ -38,10 +38,12 @@ Route::get('/about_us', function () {
 });
 
 
-Route::get('/product', 'ProductController@viewProduct');
+
+Route::get('/product','ProductController@viewProduct');
+
 
 Route::get('/home', 'UserController@index');
 Route::get('/', 'UserController@index');
 
-Route::get('/', 'UserController@index');
+
 
