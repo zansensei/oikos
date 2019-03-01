@@ -2,6 +2,7 @@
 {{--{{dd($catalog)}}--}}
 {{--dd($product)--}}
 @section("content")
+
     @foreach($catalog as $cardProduct)
 
 <br>
