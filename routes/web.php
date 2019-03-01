@@ -18,8 +18,6 @@ Route::get('/product/create', 'ProductController@create');
 
 Route::get('/product', 'ReviewController@viewReview');
 
-Route::get('/catalog', 'CatalogController@viewCatalog');
-
 Route::get('/panier', 'PanierController@viewPanier');
 
 Route::get('/product', 'ProductController@viewProduct');
@@ -64,3 +62,6 @@ Route::get('/', 'UserController@index');
 
 
 Route::get('/customer', 'CustomerController@index');
+
+// Catalog
+Route::get('/catalog', 'CatalogController@viewCatalog');

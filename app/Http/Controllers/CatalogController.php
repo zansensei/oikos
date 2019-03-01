@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CatalogController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-
     public function viewCatalog()
     {
+        /*
+         *  Old method (SQL)
+         *  $catalog = DB::select('select * from product' );
+         */
 
-        $catalog = DB::select('select * from product' );
+        $catalog = Product::all();
 
-        return view('catalog', ["catalog" => $catalog]);
+        return view('product.catalog', ["catalog" => $catalog]);
     }
 }
 
