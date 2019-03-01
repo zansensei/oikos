@@ -16,13 +16,13 @@ Route::post('/product', 'ProductController@store');
 
 Route::get('/product/create', 'ProductController@create');
 
-Route::get('/product', 'ReviewController@viewReview' );
+Route::get('/product', 'ReviewController@viewReview');
 
-Route::get('/catalog', 'CatalogController@viewCatalog' );
+Route::get('/catalog', 'CatalogController@viewCatalog');
 
 Route::get('/panier', 'PanierController@viewPanier');
 
-Route::get('/product','ProductController@viewProduct');
+Route::get('/product', 'ProductController@viewProduct');
 
 Route::get('/home', 'UserController@index');
 
@@ -54,14 +54,13 @@ Route::get('/about_us', function () {
 });
 
 
-Route::get('/product','ProductController@viewProduct');
+Route::get('/product', 'ProductController@viewProduct');
 
-Route::get('/database-product','ProductController@viewDatabase');
+Route::get('/database-product', 'ProductController@viewDatabase');
 
 
 Route::get('/home', 'UserController@index');
 Route::get('/', 'UserController@index');
-
 
 
 Route::get('/customer', 'CustomerController@index');

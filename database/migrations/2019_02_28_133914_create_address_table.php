@@ -18,12 +18,18 @@ class CreateAddressTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('number');
             $table->string('address');
-            $table->string('complément');
+            $table->string('complement');
             $table->unsignedInteger('nap');
             $table->string('city');
             $table->string('country');
+            //$table->unsignedInteger('idUtilisateur');
             $table->timestamps();
         });
+
+       // Schema::table('address', function (Blueprint $table) {
+        //    $table->foreign('idUtilisateur')->references('id')->on('utilisateur');
+       // });
+
 
         DB::table('address')->insert([
             'number' => 12,
@@ -33,6 +39,8 @@ class CreateAddressTable extends Migration
             'city' => 'Annecy',
             'country' => 'France',
         ]);
+
+
 
         DB::table('address')->insert([
             'number' => 49,
