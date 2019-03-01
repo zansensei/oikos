@@ -58,7 +58,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Nourriture',
             'idbrand' =>'1',
-            'idpromo' =>'NULL',
+                                                            'idpromo' =>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -80,7 +80,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Electricité',
             'idbrand' =>'2',
-            'idpromo' =>'NULL',
+            'idpromo' =>'11',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -102,7 +102,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Eau',
             'idbrand' =>'3',
-            'idpromo' =>'',
+            'idpromo' =>'11',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -124,7 +124,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Eau',
             'idbrand' =>'4',
-            'idpromo' =>'NULL',
+            'idpromo' =>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -146,7 +146,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Electricité',
             'idbrand' =>'5',
-            'idpromo' => 'NULL',
+            'idpromo' => '1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -168,7 +168,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Electricité',
             'idbrand' =>'6',
-            'idpromo' => 'NULL',
+            'idpromo' =>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -190,7 +190,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Electricité',
             'idbrand' =>'7',
-            'idpromo' =>'',
+            'idpromo' =>'111',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -212,7 +212,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Nourriture',
             'idbrand' =>'8',
-            'idpromo'=>'',
+            'idpromo'=>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 
@@ -234,7 +234,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Nourriture',
             'idbrand' =>'9',
-            'idpromo' =>'',
+            'idpromo' =>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 

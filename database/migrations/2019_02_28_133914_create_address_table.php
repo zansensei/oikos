@@ -18,7 +18,7 @@ class CreateAddressTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('number');
             $table->string('address');
-            $table->string('complément');
+            $table->string('complement');
             $table->unsignedInteger('nap');
             $table->string('city');
             $table->string('country');
