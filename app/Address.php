@@ -13,5 +13,5 @@ class Address extends Model
      */
     protected $table = 'address';
 
-    protected $fillable = ['number', 'address', 'complément', 'nap', 'city', 'country'];
+    protected $fillable = ['number', 'address', 'complément', 'nap', 'city', 'country', 'idUtilisateur'];
 }

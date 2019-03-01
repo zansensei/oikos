@@ -30,6 +30,9 @@ class CatalogController extends Controller
 }
 
 
+//$address=Address::all();
+//dd($address);
 
+//return view('address', ["address" => $address]);
 
 
