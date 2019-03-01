@@ -16,6 +16,7 @@ class CreateProductTable extends Migration
     public function up()
     {
         Schema::create('product', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name');
             $table->float('price');
@@ -36,10 +37,10 @@ class CreateProductTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('product', function (Blueprint $table) {
-
-            $table->foreign('idbrand')->references('id')->on('brand');
-        });
+//        Schema::table('product', function (Blueprint $table) {
+//
+//            $table->foreign('idbrand')->references('id')->on('brand');
+//        });
 
 
         DB::table('product')->insert([

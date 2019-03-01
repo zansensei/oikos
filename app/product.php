@@ -25,10 +25,14 @@ class product extends Model
         'idbrand',
         'idpromo' ,
         'created_at',
-        'updated_at',
+        'updated_at'
     ];
 
     public function brand(){
         return $this->belongsTo('App\Brand');
+    }
+
+    public function reviews(){
+        return $this->hasMany('App\Review');
     }
 }

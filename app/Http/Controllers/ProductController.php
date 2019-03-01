@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\product;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -18,10 +19,23 @@ class ProductController extends Controller
     public function viewProduct(){
         $id = request()->route('id');
 
+        $anyproduct = product::all();
+
+        foreach ($anyproduct as $product) {
+            $anyreview = $product->reviews();
+
+            dd($anyreview);
+
+            foreach ($anyreview as $review) {
+
+                dd($review->review);
+            }
+        }
+
         if ($id) {
             $anyreview = Review::where('id', $id)->get();
         } else {
-            $anyproduct = product::all();
+            $anyproduct = productController::all();
         }
         return view('product',['anyproduct' => $anyproduct , 'anyreview' => $anyreview ]);
 
