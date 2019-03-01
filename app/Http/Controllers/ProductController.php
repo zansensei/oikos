@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\product;
+use App\Product;
 use App\Review;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -17,42 +17,44 @@ class ProductController extends Controller
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function viewProduct(){
-        $id = request()->route('id');
+      $id = request()->route('id');
 
-        $anyproduct = product::all();
+       $anyproduct = Product::all();
+      // dd($anyproduct);
+       $anyreview = review::all();
 
-        foreach ($anyproduct as $product) {
-            $anyreview = $product->reviews();
+//        foreach ($anyreview as $review){
+//           $anyreview = $product->reviews();
 
-            dd($anyreview);
 
-            foreach ($anyreview as $review) {
 
-                dd($review->review);
-            }
-        }
+//            foreach ($review -> viewReview()->get() as $product){
 
-        if ($id) {
-            $anyreview = Review::where('id', $id)->get();
+
+//            }
+//        }
+      if ($id) {
+            $anyproduct = Product::where('id', $id)->get();
         } else {
-            $anyproduct = productController::all();
+            $anyproduct = Product::all();
         }
         return view('product',['anyproduct' => $anyproduct , 'anyreview' => $anyreview ]);
 
 
     }
 
-//    public function createReview() {
+public function createReview() {
 //        $anyreview = Review::all();
-//        return view('review.create', ['anyreview' => $anyreview]);
-//    }
-//
-//    public function store() {
-//        $review = new Review();
-//        $review->review = request('review');
-//        $review->note = request('note');
-//        $review->save();
-//        $anyreview = Review::all();
-//        return view('anyreview.index',  ['anyreview' => $anyreview]);
-//    }
+ return view('review.create');
+  }
+
+    public function store() {
+        $review = new Review();
+        $review->review = request('review');
+        $review->date = request('date');
+        $review->note = request('note');
+        $review->save();
+        $anyreview = Review::all();
+        return view('anyreview',  ['anyreview' => $anyreview]);
+    }
 }

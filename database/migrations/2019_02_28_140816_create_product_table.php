@@ -59,7 +59,7 @@ class CreateProductTable extends Migration
             'delivery' => '6.9',
             'category' =>'Nourriture',
             'idbrand' =>'1',
-                                                            'idpromo' =>'1',
+            'idpromo' =>'1',
             'created_at'  => Carbon::today(),
             'updated_at'  => Carbon::today()
 

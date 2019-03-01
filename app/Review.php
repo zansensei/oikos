@@ -15,6 +15,6 @@ class Review extends Model
 //    public $timestamps = true;
     public function viewReview()
     {
-        return $this->belongsTo('App\product');
+        return $this->belongsTo('App\Product');
     }
 }
