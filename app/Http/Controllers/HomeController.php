@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Brand;
+use App\Product;
 use Illuminate\Support\Facades\DB;
 
-class UserController extends Controller
+class HomeController extends Controller
 {
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -12,10 +13,20 @@ class UserController extends Controller
     public function index()
     {
         //connection to our BDD to take all info we need
-        $products = DB::select('select * , brand.image as brand_image
+        /*$products = Brand::select('select * , brand.image as brand_image
                                       from brand
                                       inner join product
                                       on brand.id = product.idbrand order by brand.title desc ');
+        */
+        $brands = Brand::all();
+        $products = Product::all();
+
+       /* foreach ($brands as $brand ) {
+            echo $brand->title ."<br />";
+        }
+        die;
+
+
         //we will create two array to add the data
         $brandsArray = array();
         $productsArray = array();
@@ -35,9 +46,9 @@ class UserController extends Controller
                 'name' => $product->name,
                 'picture' => $product->image
             ];
-        }
+        }*/
         //we return all data to our Home view
-        return view('Home.home', ['brandsArray' => $brandsArray, 'productsArray' => $productsArray]);
+        return view('Home.home', ['brands' => $brands],['products' => $products]);
     }
 }
 

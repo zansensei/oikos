@@ -40,7 +40,7 @@ Route::get('/about_us', function () {
 
 Route::get('/product', 'ProductController@viewProduct');
 
-Route::get('/home', 'UserController@index');
+Route::get('/home', 'HomeController@index');
 
-Route::get('/', 'UserController@index');
+Route::get('/', 'HomeController@index');
 
