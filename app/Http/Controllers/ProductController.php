@@ -21,18 +21,9 @@ class ProductController extends Controller
 
        $anyproduct = Product::all();
       // dd($anyproduct);
-       $anyreview = Review::all();
-
-//        foreach ($anyreview as $review){
-//           $anyreview = $product->reviews();
+       $anyreview = review::all();
 
 
-
-//            foreach ($review -> viewReview()->get() as $product){
-
-
-//            }
-//        }
         if ($id) {
             $anyproduct = Product::where('id', $id)->get();
         } else {
@@ -40,22 +31,17 @@ class ProductController extends Controller
         }
         return view('product',['anyproduct' => $anyproduct , 'anyreview' => $anyreview ]);
 
-    }
 
-    public function create() {
-        return view('review.create');
     }
-
 
     public function createReview() {
-//      $anyreview = Review::all();
+    //        $anyreview = Review::all();
         return view('review.create');
     }
 
     public function store() {
         $review = new Review();
         $review->review = request('review');
-        $review->date = request('date');
         $review->note = request('note');
         $review->save();
         $anyreview = Review::all();
