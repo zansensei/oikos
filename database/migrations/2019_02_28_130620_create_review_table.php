@@ -24,10 +24,10 @@ class CreateReviewTable extends Migration
             $table->unsignedInteger('idcustomer');
             $table->timestamps();
         });
-        /*Schema::table('review', function (Blueprint $table) {
-            $table->foreign('product_id')->references('id')->on('product');
-            $table->foreign('user_id')->references('id')->on('user');
-        });*/
+        Schema::table('review', function (Blueprint $table) {
+            $table->foreign('idproduct')->references('id')->on('product');
+            $table->foreign('idcustomer')->references('id')->on('customer');
+        });
 
         DB::table('review')->insert([
             'review' => 'Cela fait quelques semaines que j’ai acheté l’Aerogarden, parce que je suis fou de cuisine faisant appel à des herbes (vraiment) fraîches. J’ai installé l’appareil en cinq minutes, malgré que je sois peu habile. C’est sympa de voir pousser ses plantes chaque jour. J’ai déjà utilisé les herbes dans différents repas. Elles sont beaucoup plus goûteuses que celles achetés en barquette au supermarché. J’ai préparé un pesto délicieusement frais à base de basilic. Je suis très content de mon Aerogarden et je le conseille à tout le monde.',
