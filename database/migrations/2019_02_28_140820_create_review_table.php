@@ -16,6 +16,7 @@ class CreateReviewTable extends Migration
     public function up()
     {
         Schema::create('review', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->mediumText('review');
             $table->dateTime('date');
@@ -26,7 +27,7 @@ class CreateReviewTable extends Migration
         });
         Schema::table('review', function (Blueprint $table) {
             $table->foreign('idproduct')->references('id')->on('product');
-            $table->foreign('idcustomer')->references('id')->on('customer');
+//            $table->foreign('idcustomer')->references('id')->on('customer');
         });
 
         DB::table('review')->insert([
