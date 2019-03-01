@@ -1,4 +1,4 @@
-php<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +16,9 @@ Route::post('/product', 'ProductController@store');
 
 Route::get('/product/create', 'ProductController@create');
 
-Route::get('/review/{id}', 'ProductController@viewProduct');
+Route::get('/product/{id}', 'ProductController@viewProduct');
 
-Route::get('/product', 'ReviewController@viewReview' );
+Route::get('/review/{id}', 'ProductController@viewProduct');
 
 Route::get('/catalog', 'CatalogController@viewCatalog' );
 
