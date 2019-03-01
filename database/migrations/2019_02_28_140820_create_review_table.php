@@ -26,8 +26,8 @@ class CreateReviewTable extends Migration
             $table->timestamps();
         });
         Schema::table('review', function (Blueprint $table) {
-            $table->foreign('idproduct')->references('id')->on('product');
-//            $table->foreign('idcustomer')->references('id')->on('customer');
+            $table->foreign('product_id')->references('id')->on('product');
+            $table->foreign('user_id')->references('id')->on('user');
         });
 
         DB::table('review')->insert([

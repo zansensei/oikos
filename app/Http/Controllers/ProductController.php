@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\product;
-use App\Review;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Facades\DB;
@@ -19,40 +18,25 @@ class ProductController extends Controller
     public function viewProduct(){
         $id = request()->route('id');
 
-        $anyproduct = product::all();
-
-        foreach ($anyproduct as $product) {
-            $anyreview = $product->reviews();
-
-            dd($anyreview);
-
-            foreach ($anyreview as $review) {
-
-                dd($review->review);
-            }
-        }
-
         if ($id) {
-            $anyreview = Review::where('id', $id)->get();
+            $anyreview = Product::where('id', $id)->get();
         } else {
-            $anyproduct = productController::all();
+            $anyproduct = Product::all();
         }
         return view('product',['anyproduct' => $anyproduct , 'anyreview' => $anyreview ]);
 
-
     }
 
-//    public function createReview() {
-//        $anyreview = Review::all();
-//        return view('review.create', ['anyreview' => $anyreview]);
-//    }
-//
-//    public function store() {
-//        $review = new Review();
-//        $review->review = request('review');
-//        $review->note = request('note');
-//        $review->save();
-//        $anyreview = Review::all();
-//        return view('anyreview.index',  ['anyreview' => $anyreview]);
-//    }
+    public function create() {
+        return view('review.create');
+    }
+
+    public function store() {
+        $review = new Review();
+        $review->review = request('review');
+        $review->note = request('note');
+        $review->save();
+        $anyreview = Review::all();
+        return view('anyreview.index',  ['anyreview' => $anyreview = Review::all()]);
+    }
 }
