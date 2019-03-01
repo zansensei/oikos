@@ -16,7 +16,7 @@ class ProductController extends Controller
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function viewProduct(){
-
+        $id = request()->route('id');
 
         if ($id) {
             $anyreview = Review::where('id', $id)->get();
@@ -28,16 +28,17 @@ class ProductController extends Controller
 
     }
 
-    public function create() {
-        return view('review.create');
-    }
-
-    public function store() {
-        $review = new Review();
-        $review->review = request('review');
-        $review->note = request('note');
-        $review->save();
-        $anyreview = Review::all();
-        return view('anyreview.index',  ['anyreview' => $anyreview = Review::all()]);
-    }
+//    public function createReview() {
+//        $anyreview = Review::all();
+//        return view('review.create', ['anyreview' => $anyreview]);
+//    }
+//
+//    public function store() {
+//        $review = new Review();
+//        $review->review = request('review');
+//        $review->note = request('note');
+//        $review->save();
+//        $anyreview = Review::all();
+//        return view('anyreview.index',  ['anyreview' => $anyreview]);
+//    }
 }
