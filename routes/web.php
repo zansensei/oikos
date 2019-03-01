@@ -16,6 +16,8 @@ Route::post('/product', 'ProductController@store');
 
 Route::get('/product/create', 'ProductController@create');
 
+Route::get('/review/{id}', 'ProductController@viewProduct');
+
 Route::get('/product', 'ReviewController@viewReview' );
 
 Route::get('/catalog', 'CatalogController@viewCatalog' );
@@ -27,6 +29,8 @@ Route::get('/product','ProductController@viewProduct');
 Route::get('/home', 'UserController@index');
 
 Route::get('/', 'UserController@index');
+
+//form
 
 Route::get('/formReview', 'FormsController@create');
 
