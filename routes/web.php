@@ -22,10 +22,6 @@ Route::get('/panier', 'PanierController@viewPanier');
 
 Route::get('/product', 'ProductController@viewProduct');
 
-Route::get('/home', 'UserController@index');
-
-Route::get('/', 'UserController@index');
-
 Route::get('/formReview', 'FormsController@create');
 
 Route::post('/formReview', 'FormsController@display');
@@ -57,8 +53,12 @@ Route::get('/product', 'ProductController@viewProduct');
 Route::get('/database-product', 'ProductController@viewDatabase');
 
 
-Route::get('/home', 'UserController@index');
-Route::get('/', 'UserController@index');
+// Home
+Route::get('/brand/create', 'HomeController@create');
+Route::get('/', 'HomeController@show');
+Route::post('/home', 'HomeController@store');
+
+
 
 
 Route::get('/customer', 'CustomerController@index');
