@@ -19,6 +19,8 @@ class CatalogController extends Controller
 
         return view('product.catalog', ["catalog" => $catalog]);
     }
+
+
 }
 
 

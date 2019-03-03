@@ -24,6 +24,8 @@ Route::get('/product/{id}', 'ProductController@viewProduct');
 Route::get('/catalog', 'CatalogController@viewCatalog' );
 
 Route::get('/database-product','ProductController@viewDatabase');
+Route::get('/createProduct', 'CreateProductController@show');
+Route::post('/createProduct', 'CreateProductController@create');
 
 //Review
 
@@ -35,13 +37,13 @@ Route::get('/panier', 'PanierController@viewPanier');
 
 //Home
 
-Route::get('/home', 'UserController@index');
+Route::get('/home', 'HomeController@show');
 
-Route::get('/home', 'UserController@index');
+Route::get('/', 'HomeController@show');
 
 //Customer
 
-Route::get('/', 'UserController@index');
+
 
 Route::get('/customer', 'CustomerController@index');
 

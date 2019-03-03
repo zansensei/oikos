@@ -27,19 +27,19 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{$product -> image1}}" class="image" alt="photo-1">   <!-- 1 SLIDE -->
+                                <img src="{{asset($product -> image1)}}" class="image" alt="photo-1">   <!-- 1 SLIDE -->
                             </div>
                             <div class="carousel-item">
-                                <img src="{{$product -> image2}}" class="image" alt="photo-2">   <!-- 2 SLIDE -->
+                                <img src="{{asset($product -> image2)}}" class="image" alt="photo-2">   <!-- 2 SLIDE -->
                             </div>
                             <div class="carousel-item">
-                                <img src="{{$product -> image3}}" class="image" alt="photo-3">   <!-- 3 SLIDE -->
+                                <img src="{{asset($product -> image3)}}" class="image" alt="photo-3">   <!-- 3 SLIDE -->
                             </div>
                             <div class="carousel-item">
-                                <img src="{{$product -> image4}}" class="image" alt="photo-4">   <!-- 4 SLIDE -->
+                                <img src="{{asset($product -> image4)}}" class="image" alt="photo-4">   <!-- 4 SLIDE -->
                             </div>
                             <div class="carousel-item">
-                                <embed width="1100" height="600" src="{{$product -> video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>   <!-- 3 SLIDE -->
+                                <embed width="1100" height="600" src="{{asset($product -> video)}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>   <!-- 3 SLIDE -->
 
 
 
